@@ -1,0 +1,166 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="365dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:background="@drawable/app_backgroud_gradient"
+    android:backgroundTint="@color/black"
+    android:padding="3dp"
+    app:circularflow_defaultRadius="30dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="140dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/app_backgroud_gradient"
+        android:backgroundTint="@color/white"
+        android:padding="3dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="355dp"
+            android:layout_height="140dp"
+            android:background="@drawable/rounded_corners"
+            android:foregroundTintMode="screen"
+            android:padding="2dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="145dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="3dp"
+                android:padding="3dp"
+                app:cardCornerRadius="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/cartImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/FOODNAME"
+                style="@android:style/Widget.DeviceDefault.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Item Name"
+                android:textColor="#FDC007"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.03"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/cartItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/akronim"
+                android:padding="2dp"
+                android:text="RS.150"
+                android:textColor="#0A0A0A"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/FOODNAME"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/white_button_background"
+                android:clickable="true"
+                android:elevation="10sp"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cartItemPrice"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.443"
+                app:srcCompat="@drawable/delete_icon"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mini_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/app_backgroud_gradient"
+                android:clickable="true"
+                android:elevation="10sp"
+                android:focusable="true"
+                android:foreground="@drawable/left_vaaro"
+                android:tintMode="src_atop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.965"
+                app:srcCompat="@drawable/left_vaaro"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/cartItemQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:text="1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/max_button"
+                app:layout_constraintStart_toEndOf="@+id/mini_button"
+                app:layout_constraintTop_toBottomOf="@+id/cartItemPrice"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/max_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/app_backgroud_gradient"
+                android:clickable="true"
+                android:elevation="10sp"
+                android:focusable="true"
+                android:foreground="@drawable/arrow_right_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.965"
+                app:srcCompat="@drawable/arrow_right_24"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
